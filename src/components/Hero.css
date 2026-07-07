@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero-wrapper {
+  background-color: #04040c;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #ffffff;
+}
+
+/* Purple glow behind the picture */
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.55) 0%, rgba(124, 58, 237, 0) 70%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 60px;
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #a78bfa;
+}
+
+/* MAIN CONTENT */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 60px 0 60px;
+  position: relative;
+  z-index: 2;
+  min-height: 70vh;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.greeting {
+  font-size: 22px;
+  font-weight: 600;
+  color: #a78bfa;
+  margin: 0 0 10px 0;
+}
+
+.hero-name {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* CENTER IMAGE */
+.hero-center {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  position: relative;
+}
+
+/* Soft glow directly behind/under the photo so its edges melt into
+   the page background instead of showing a hard rectangle */
+.hero-image-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 420px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(124, 58, 237, 0.45) 0%,
+    rgba(124, 58, 237, 0.25) 35%,
+    rgba(4, 4, 12, 0.6) 65%,
+    rgba(4, 4, 12, 0) 100%
+  );
+  filter: blur(25px);
+  z-index: 1;
+}
+
+.hero-image {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  /* fades the bottom/side edges of the photo into the page background
+     so any leftover background color on the cutout blends away smoothly */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 82%,
+    rgba(0, 0, 0, 0.6) 94%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 82%,
+    rgba(0, 0, 0, 0.6) 94%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.55));
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
+}
+
+.role-eyebrow {
+  font-size: 22px;
+  font-weight: 600;
+  color: #a78bfa;
+  margin: 0 0 10px 0;
+}
+
+.role-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.role-gradient {
+  background: linear-gradient(90deg, #7c3aed, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: block;
+}
+
+.role-white {
+  color: #ffffff;
+  display: block;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 5;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #a78bfa;
+}
+
+/* ============================= */
+/* ENTRANCE ANIMATIONS            */
+/* Sequence: image first, then    */
+/* left name + right role text,   */
+/* then social icons.             */
+/* ============================= */
+
+@keyframes imagePopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim-image {
+  opacity: 0;
+  animation: imagePopIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-anim-left {
+  opacity: 0;
+  animation: slideInLeft 0.7s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-anim-right {
+  opacity: 0;
+  animation: slideInRight 0.7s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.hero-anim-icons {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 1.15s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .hero-name,
+  .role-title {
+    font-size: 32px;
+  }
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

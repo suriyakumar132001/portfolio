@@ -1,0 +1,130 @@
+.about-wrapper {
+  background-color: #04040c;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #ffffff;
+}
+
+/* Purple glow behind the picture */
+.about-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.55) 0%, rgba(124, 58, 237, 0) 70%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+/* LEFT: Picture */
+.about-left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-image {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* RIGHT: Content */
+.about-right {
+  flex: 1.2;
+  min-width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-eyebrow {
+  font-size: 36px;
+  font-weight: 800;
+  color: #7c3aed;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #c9c9d6;
+  max-width: 520px;
+  margin: 0 0 32px 0;
+}
+
+.highlight {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+/* RESUME BUTTON */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 2px solid #7c3aed;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.6);
+  transition: all 0.25s ease;
+}
+
+.resume-btn:hover {
+  background-color: #7c3aed;
+  box-shadow: 0 0 28px rgba(124, 58, 237, 0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .about-right {
+    text-align: center;
+  }
+
+  .about-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-eyebrow,
+  .about-title {
+    font-size: 28px;
+  }
+
+  .resume-btn {
+    margin: 0 auto;
+  }
+}

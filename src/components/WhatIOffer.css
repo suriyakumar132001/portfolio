@@ -1,0 +1,127 @@
+.offer-section {
+  background: #07070c;
+  padding: 80px 24px;
+  min-height: 100vh;
+}
+
+.offer-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.offer-heading .highlight {
+  color: #8b5cf6;
+}
+
+.offer-grid {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 800px) {
+  .offer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card */
+.offer-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 40px 36px 56px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(124, 58, 237, 0.55) 0%, rgba(124, 58, 237, 0.12) 40%, #0b0b12 75%);
+  overflow: hidden;
+  transition: padding-bottom 0.35s ease;
+}
+
+.offer-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.offer-desc {
+  margin-top: 16px;
+  max-width: 380px;
+  color: #d4d4d8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Reveal area (skills / tools) — collapsed by default */
+.offer-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+.offer-reveal > * {
+  overflow: hidden;
+}
+
+.offer-card.open .offer-reveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 24px;
+}
+
+.offer-reveal .offer-label {
+  overflow: hidden;
+  color: #a1a1aa;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.offer-tags {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.offer-tag {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Toggle chevron button */
+.offer-toggle {
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #8b5cf6;
+  background: transparent;
+  color: #8b5cf6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.offer-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.offer-card.open .offer-toggle {
+  transform: rotate(180deg);
+}
