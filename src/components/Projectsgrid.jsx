@@ -1,4 +1,4 @@
-import "./ProjectsGrid.css";
+import "./Projectsgrid.css";
 
 // Replace the image URLs with your own screenshots (e.g. import from /assets)
 const projects = [
