@@ -50,14 +50,16 @@
   padding: 0;
 }
 
-.nav-links li {
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.8s ease;
 }
 
-.nav-links li:hover {
+.nav-link:hover {
   color: #a78bfa;
 }
 
@@ -130,8 +132,6 @@
   object-fit: contain;
   position: relative;
   z-index: 2;
-  /* fades the bottom/side edges of the photo into the page background
-     so any leftover background color on the cutout blends away smoothly */
   -webkit-mask-image: linear-gradient(
     to bottom,
     #000 82%,
@@ -198,7 +198,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  transition: color 0.8s ease;
 }
 
 .social-icons a:hover {
@@ -207,9 +207,6 @@
 
 /* ============================= */
 /* ENTRANCE ANIMATIONS            */
-/* Sequence: image first, then    */
-/* left name + right role text,   */
-/* then social icons.             */
 /* ============================= */
 
 @keyframes imagePopIn {

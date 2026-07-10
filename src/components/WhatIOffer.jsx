@@ -1,30 +1,23 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./WhatIOffer.css";
 
 const skills = [
   "Html",
   "CSS",
   "JavaScript",
+  "Python",
   "Tailwind CSS",
   "React JS",
-  "Framer Motion",
   "Node JS",
   "Express JS",
-  "SupaBase",
   "Mongo DB",
   "My SQL",
-  "Postman",
   "Rest API's",
   "Git & GitHub",
 ];
 
 const tools = [
   "VS Code",
-  "Postman",
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "SupaBase",
-  "MS Copilot",
   "Claude",
   "Git",
   "GitHub",

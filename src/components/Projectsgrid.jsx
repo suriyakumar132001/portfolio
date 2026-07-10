@@ -58,7 +58,7 @@ function ProjectCard({ project }) {
   };
 
   return (
-    <div className="project-card" onClick={handleClick}>
+    <div className="project-card" onClick={handleClick} >
       <div className="project-card-top">
         <span className="project-number">{project.number}</span>
         <span className="project-tag">{project.tag}</span>
@@ -84,7 +84,7 @@ function ProjectCard({ project }) {
 
 export default function ProjectsGrid() {
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div className="glow-bottom-right" />
       <div className="glow-top-left" />
 

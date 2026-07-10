@@ -4,8 +4,8 @@ import "./ContactMe.css";
 const EMAIL = "suriyakumar132001@gmail.com";
 
 const socialLinks = [
-  { label: "Linkedin", href: "https://linkedin.com/in/suriyakumar" },
-  { label: "GitHub", href: "https://github.com/your-username" },
+  { label: "Linkedin", href: "https://www.linkedin.com/in/suriyakumar-developer/" },
+  { label: "GitHub", href: "https://github.com/suriyakumar132001" },
 ];
 
 const talkLinks = [
@@ -26,7 +26,7 @@ export default function ContactMe() {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <h2 className="contact-heading">Contact Me</h2>
       <p className="contact-subheading">Tell me about your next project.</p>
 

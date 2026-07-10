@@ -2,34 +2,28 @@ import  { useState } from "react";
 import "./WorkExperience.css";
 
 const experienceData = [
+  
   {
-    role: "Frontend Web Developer",
-    company: "Phaton",
-    duration: "Oct - Jan 26",
-    description:
-      "Completed a Frontend Web Developer internship, where I collaborated with a team to build a fully functional e-commerce platform, developing responsive and dynamic interfaces using React.js and Tailwind CSS.",
-  },
-  {
-    role: "Frontend Web Developer",
+    role: "MERN stack Developer",
     company: "Internship",
-    duration: "Aug - July",
+    duration: "Mar - may 2026",
     description:
-      "Completed a 4-project Frontend Web Developer internship, creating a personal portfolio, landing page, weather app, and a music website clone using HTML, CSS, and JavaScript.",
+      "Completed a project Frontend Web Developer internship, creating a personal portfolio using HTML, CSS , JavaScript and React .",
   },
 ];
 
 const educationData = [
   {
-    role: "BS Computer Science",
-    company: "Your University",
-    duration: "2022 - 26",
+    role: "BE Computer Science",
+    company: "Francis xavier Engineering College",  
+    duration: "2019 - 22",
     description:
       "Studying core computer science subjects including data structures, algorithms, databases, and web development, with a focus on building real-world projects alongside coursework.",
   },
   {
-    role: "Intermediate (Pre-Engineering)",
-    company: "Your College",
-    duration: "2020 - 22",
+    role: "Diploma in Computer Sciences",
+    company: "Sankar Polytechnic College",
+    duration: "2016 - 19",
     description:
       "Completed higher secondary education with a focus on mathematics and physics, building the foundation for a computer science degree.",
   },
