@@ -1,4 +1,5 @@
 import "./Projectsgrid.css";
+import projectPolicyImg from "../assets/policy.png";
 
 // Replace the image URLs with your own screenshots (e.g. import from /assets)
 const projects = [
@@ -7,7 +8,7 @@ const projects = [
     tag: "Web",
     title: "Insurance Policy CRM (MERN Stack) — Personal Project",
     stack: "React JS, Node JS and MongoDB",
-    image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=600&q=80",
+    image: projectPolicyImg,
     link: "https://crm-frontend-qupq.vercel.app/login",
   },
   

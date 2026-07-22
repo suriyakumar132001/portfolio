@@ -69,7 +69,7 @@ export default function AboutMe() {
           development skills.
         </p>
 
-        <a href="/resume.pdf" download="Suryakumar_Resume.pdf" className="resume-btn">
+        <a href="/Surya_Kumar_N_MERN_Resume.pdf" download="Surya_Kumar_N_MERN_Resume.pdf" className="resume-btn">
           Resume
         </a>
       </div>
